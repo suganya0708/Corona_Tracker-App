@@ -5,6 +5,7 @@ public class LocationStats {
     private String state;
     private String country;
     private int latestTestCasesReport;
+    private int diffFromPrevDay;
 
 
     public LocationStats(String state, String country, int latestTestCasesReport1) {
@@ -21,6 +22,7 @@ public class LocationStats {
     public void setLatestTestCasesReport(int latestTestCasesReport) {
         this.latestTestCasesReport = latestTestCasesReport;
     }
+
     public void setState(String state) {
         this.state = state;
     }
@@ -36,17 +38,28 @@ public class LocationStats {
     public String getCountry() {
         return country;
     }
+
     public int getLatestTestCasesReport() {
         return latestTestCasesReport;
     }
 
+    public int getDiffFromPrevDay() {
+        return diffFromPrevDay;
+    }
+
+    public void setDiffFromPrevDay(int diffFromPrevDay) {
+        this.diffFromPrevDay = diffFromPrevDay;
+    }
 
     @Override
     public String toString() {
         return "LocationStats{" +
                 "state='" + state + '\'' +
                 ", country='" + country + '\'' +
-                ", LatestTestCasesReport=" + latestTestCasesReport +
+                ", latestTestCasesReport=" + latestTestCasesReport +
+                ", diffFromPrevDay=" + diffFromPrevDay +
                 '}';
     }
+
+
 }
